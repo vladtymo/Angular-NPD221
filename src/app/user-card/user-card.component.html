@@ -6,7 +6,7 @@
         <h3>USER</h3>
         <p>Login: {{user.login}}</p>
         <p>Birthdate: {{user.birthdate | date:'mediumDate'}}</p>
-        <p>Role: {{user.role}}</p>
+        <p>Role: {{user.role}} <button (click)="changeRole()">&lt;&gt;</button></p>
         <div>
             <button (click)="remove()">X</button>
         </div>

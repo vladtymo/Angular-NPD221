@@ -1,0 +1,21 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <label>
+        <span>Login:</span>
+        <input type="text" formControlName="login"/>
+    </label>
+    <label>
+        <span>Birthdate:</span>
+        <input type="date" formControlName="birthdate" />
+    </label>
+    <label>
+        <span>Role:</span>
+        <select formControlName="role">
+            <option value="Manager">Manager</option>
+            <option value="Admin">Admin</option>
+        </select>
+    </label>
+    <div>
+        <button type="reset">Cancel</button>
+        <button type="submit">Create</button>
+    </div>
+</form>

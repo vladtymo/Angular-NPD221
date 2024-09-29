@@ -17,6 +17,11 @@ export class UserCardComponent {
   @Output()
   onDelete = new EventEmitter<number>();
 
+  changeRole() {
+    if (this.user)
+      this.user.role = this.user?.role === "Admin" ? "Manager" : "Admin";
+  }
+
   remove() {  
     // remove user? - No
     this.onDelete.emit(this.user?.id);
