@@ -5,6 +5,9 @@
 
 <div>
   @for (i of users; track $index) {
-  <app-user-card [user]="i"></app-user-card>
+  <app-user-card [user]="i" (onDelete)="removeItem($event)"></app-user-card>
   }
+</div>
+<div>
+  <button (click)="clear()">Clear All</button>
 </div>

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IUser } from '../models/user';
 
 @Component({
@@ -12,10 +12,13 @@ import { IUser } from '../models/user';
 export class UserCardComponent {
 
   @Input()
-  user: IUser = {
-    id: 0,
-    login: "example",
-    birthdate: new Date(),
-    role: "none"
-  };
+  user?: IUser;
+
+  @Output()
+  onDelete = new EventEmitter<number>();
+
+  remove() {  
+    // remove user? - No
+    this.onDelete.emit(this.user?.id);
+  }
 }

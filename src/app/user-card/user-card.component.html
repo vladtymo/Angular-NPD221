@@ -1,8 +1,14 @@
 <!-- Angular Pipe: date | uppercase | lowercase | percent -->
 
-<div [class.admin]="user.role == 'Admin'">
-    <h3>USER</h3>
-    <p>Login: {{user.login}}</p>
-    <p>Birthdate: {{user.birthdate | date:'mediumDate'}}</p>
-    <p>Role: {{user.role}}</p>
-</div>
+@if(user)
+{
+    <div class="card" [class.admin]="user.role == 'Admin'">
+        <h3>USER</h3>
+        <p>Login: {{user.login}}</p>
+        <p>Birthdate: {{user.birthdate | date:'mediumDate'}}</p>
+        <p>Role: {{user.role}}</p>
+        <div>
+            <button (click)="remove()">X</button>
+        </div>
+    </div>
+}
