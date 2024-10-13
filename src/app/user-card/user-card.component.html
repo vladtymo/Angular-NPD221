@@ -2,10 +2,11 @@
 
 @if(user)
 {
-    <div class="card" [class.admin]="user.role == 'Admin'">
+    <div class="card" [class.admin]="user.role == 'admin'">
         <h3>USER</h3>
-        <p>Login: {{user.login}}</p>
-        <p>Birthdate: {{user.birthdate | date:'mediumDate'}}</p>
+        <p>Login: {{user.username}}</p>
+        <p>Birthdate: {{user.birthDate | date:'mediumDate'}}</p>
+        <p>Phone: {{user.phone}}</p>
         <p>Role: {{user.role}} <button (click)="changeRole()">&lt;&gt;</button></p>
         <div>
             <button (click)="remove()">X</button>

@@ -20,7 +20,7 @@ export class UserFormComponent {
   constructor(private formBuilder: FormBuilder) {
 
     this.userForm = this.formBuilder.group({
-      login: ['', Validators.required],
+      email: ['', Validators.required],
       birthdate: [new Date()],
       role: ['Manager', Validators.required],
     });

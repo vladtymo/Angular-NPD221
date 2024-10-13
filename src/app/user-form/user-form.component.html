@@ -1,7 +1,7 @@
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
     <label>
-        <span>Login:</span>
-        <input type="text" formControlName="login"/>
+        <span>Email:</span>
+        <input type="email" formControlName="email"/>
     </label>
     <label>
         <span>Birthdate:</span>
@@ -10,8 +10,9 @@
     <label>
         <span>Role:</span>
         <select formControlName="role">
-            <option value="Manager">Manager</option>
-            <option value="Admin">Admin</option>
+            <option value="user" selected>User</option>
+            <option value="moderator">Moderator</option>
+            <option value="admin">Admin</option>
         </select>
     </label>
     <div>
