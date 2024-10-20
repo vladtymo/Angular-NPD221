@@ -1,16 +1,9 @@
-<h1>Hello Angular - {{title}}</h1>
-<p>Year: {{year}}</p>
+<nav>
+  <h2>Menu</h2>
+  <ul>
+    <li><a routerLink="/users">Users List</a></li>
+    <li><a routerLink="/about">About</a></li>
+  </ul>
+</nav>
 
-<button (click)="change()">Change Values</button>
-
-<div>
-  @for (i of users; track $index) {
-  <app-user-card [user]="i" (onDelete)="removeItem($event)"></app-user-card>
-  }
-</div>
-<div>
-  <button (click)="clear()">Clear All</button>
-</div>
-
-<h2>Create New User</h2>
-<app-user-form (onCreate)="create($event)"></app-user-form>
+<router-outlet></router-outlet>
